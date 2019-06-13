@@ -1,8 +1,8 @@
 <div id="app" class="container">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-faded">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary bg-faded">
   
-  <div class="ml-auto order-0 align-content-center">
-    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  <div class="ml-auto order-0 ">
+    <button class="navbar-toggler navbar-toggler-left" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,16 +11,16 @@
     <img src="assets/img/A-64.png" width="30" height="30" alt="">
   </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': navbarOpen}">
       <ul class="navbar-nav ml-auto " >
         <li class="nav-item" routerLinkActive="active" >
-          <a class="nav-link" [routerLink]="['home']" >Home</a>
+          <a class="nav-link" href="#tema1" (click)="toggleNavbar()">OBTÉN TU PRÉSTAMO</a>
         </li>
         <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
+          <a class="nav-link" href="#tema2" (click)="toggleNavbar()">BNEFICIOS</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['about']">About</a>
+          <a class="nav-link" href="#tema3" (click)="toggleNavbar()">CÓMO FUNCIONA</a>
         </li>
       </ul>
   </div>
